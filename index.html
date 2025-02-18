@@ -16,6 +16,7 @@
             cursor: pointer;
             color: white;
             font-family: Arial, sans-serif;
+            flex-direction: column;
         }
         .overlay {
             position: absolute;
@@ -29,14 +30,22 @@
             max-width: 90%;
             max-height: 90%;
         }
+        .watch-video {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ff0000;
+            cursor: pointer;
+            text-decoration: underline;
+        }
     </style>
 </head>
-<body onclick="playVideo()">
+<body>
     <div class="overlay"></div>
     <video id="scaryVideo">
         <source src="VID-20250218-WA0023.mp4" type="video/mp4">
         مرورگر شما از ویدیو پشتیبانی نمی‌کند.
     </video>
+    <p class="watch-video" onclick="playVideo()">Click here to watch the video</p>
     <script>
         function playVideo() {
             let video = document.getElementById("scaryVideo");
@@ -45,8 +54,21 @@
             video.style.display = "block";
             video.play();
             audio.play();
-            document.body.onclick = null;
+            document.querySelector(".watch-video").style.display = "none";
         }
     </script>
 </body>
 </html>
+داخل کد قرارش بده که داخل بخش Downloads توی پوشه 
+Vhs crary هست
+
+
+
+
+
+
+Search
+
+Reason
+
+ChatGPT can make mistakes. Check 
