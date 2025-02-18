@@ -41,8 +41,8 @@
 </head>
 <body>
     <div class="overlay"></div>
-    <video id="scaryVideo">
-        <source src="VID-20250218-WA0023.mp4" type="video/mp4">
+    <video id="scaryVideo" controls>
+        <source src="https://yourserver.com/path-to-video.mp4" type="video/mp4">
         مرورگر شما از ویدیو پشتیبانی نمی‌کند.
     </video>
     <p class="watch-video" onclick="playVideo()">Click here to watch the video</p>
@@ -52,23 +52,11 @@
             let audio = new Audio("https://www.fesliyanstudios.com/play-mp3/4389");
             
             video.style.display = "block";
-            video.play();
-            audio.play();
+            video.play().catch(error => console.log("Error playing video:", error));
+            audio.play().catch(error => console.log("Error playing audio:", error));
+            
             document.querySelector(".watch-video").style.display = "none";
         }
     </script>
 </body>
 </html>
-داخل کد قرارش بده که داخل بخش Downloads توی پوشه 
-Vhs crary هست
-
-
-
-
-
-
-Search
-
-Reason
-
-ChatGPT can make mistakes. Check 
